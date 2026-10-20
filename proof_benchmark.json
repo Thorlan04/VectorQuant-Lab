@@ -8,15 +8,15 @@
     "recall_at_10": 0.98,
     "compression_ratio": 3.96,
     "ram_savings_pct": 74.7,
-    "latency_ms": 7.62,
-    "composite_score": 146.71
+    "latency_ms": 38.42,
+    "composite_score": 131.49
   },
   "industry_baselines_beaten": [
     "Standard Min-Max Scalar Quantization (SQ8)",
     "Uniform Percentile Clipped Quantization",
     "Naive Truncated Dimensionality + Int8"
   ],
-  "verified_at": "2026-10-20T18:52:21.849057Z",
+  "verified_at": "2026-10-20T21:02:09.568778Z",
   "public_interface_preview": "def quantize_transform(vectors_fp32, calibration_stats=None):\n    # [PROPRIETARY QUANTIZATION MATRIX CORE - UNLOCKED IN FULL LICENSE]\n    pass\n\ndef asymmetric_similarity_score(query_fp32, quantized_codes, meta_params):\n    # [PROPRIETARY QUANTIZATION MATRIX CORE - UNLOCKED IN FULL LICENSE]\n    pass\n",
   "license": "Commercial Proprietary - Available via Polar.sh Instant Delivery"
 }

@@ -1,0 +1,6 @@
+# VectorQuant-Lab Lightweight Requirements
+# Zero heavy local models (No PyTorch, FAISS, TensorFlow, Ollama)
+google-genai>=2.0.0
+numpy>=1.23.0
+python-dotenv>=1.0.0
+requests>=2.28.0

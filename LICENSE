@@ -1,0 +1,24 @@
+PROPRIETARY COMMERCIAL EVALUATION LICENSE — ALL RIGHTS RESERVED
+Copyright (c) 2026 Cedric Jover / VectorQuant-Lab. All Rights Reserved.
+
+1. SCOPE OF PUBLIC REPOSITORY (BENCHMARK VERIFICATION ONLY)
+This public repository contains ONLY the deterministic evaluation harness
+(`src/benchmark_engine.py`), formal unit tests (`tests/test_evaluator_contract.py`),
+and cryptographic benchmark proofs (`public_store/proof_benchmark.json`).
+The proprietary champion mathematical algorithm (`algorithme_champion.py`) and
+autonomous evolutionary R&D engine are trade secrets and are NOT distributed in
+this public repository.
+
+2. RESTRICTIONS ON USE, COPYING & REDISTRIBUTION
+Permission is granted solely to inspect and execute the public benchmark harness
+locally for the purpose of verifying the published performance metrics.
+NO permission is granted to copy, fork for commercial redistribution, sublicense,
+reverse-engineer, or deploy any part of this software in a commercial, production,
+or revenue-generating environment without a valid paid Commercial Enterprise License.
+
+3. COMMERCIAL PRODUCTION LICENSING
+To unlock the full proprietary mathematical algorithm (`algorithme_champion.py`)
+and obtain a royalty-free commercial production license, acquire an official license at:
+https://buy.polar.sh/polar_cl_I7YYr9eEP1qYCSj8TjGDyK4bkKnAVzJRcMBPo2kaPlw
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND.

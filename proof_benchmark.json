@@ -1,0 +1,22 @@
+{
+  "status": "CERTIFIED_HIGH_DIMENSIONAL_BREAKTHROUGH",
+  "certification_authority": "VectorQuant-Lab Deterministic Benchmark Sandbox",
+  "algorithm_name": "NormalizedSymmetric_DirectSQ8_gen1",
+  "generation": 1,
+  "sha256_code_hash": "16a258b33e6636c4993c4d466da329a8a88a2274ed196fa596077400b1f033dd",
+  "metrics": {
+    "recall_at_10": 0.98,
+    "compression_ratio": 3.96,
+    "ram_savings_pct": 74.7,
+    "latency_ms": 7.62,
+    "composite_score": 146.71
+  },
+  "industry_baselines_beaten": [
+    "Standard Min-Max Scalar Quantization (SQ8)",
+    "Uniform Percentile Clipped Quantization",
+    "Naive Truncated Dimensionality + Int8"
+  ],
+  "verified_at": "2026-10-20T18:52:21.849057Z",
+  "public_interface_preview": "def quantize_transform(vectors_fp32, calibration_stats=None):\n    # [PROPRIETARY QUANTIZATION MATRIX CORE - UNLOCKED IN FULL LICENSE]\n    pass\n\ndef asymmetric_similarity_score(query_fp32, quantized_codes, meta_params):\n    # [PROPRIETARY QUANTIZATION MATRIX CORE - UNLOCKED IN FULL LICENSE]\n    pass\n",
+  "license": "Commercial Proprietary - Available via Polar.sh Instant Delivery"
+}

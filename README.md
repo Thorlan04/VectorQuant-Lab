@@ -58,7 +58,7 @@ def asymmetric_similarity_score(query_fp32: np.ndarray, quantized_codes: np.ndar
 
 ### Commercial Package File Structure:
 ```
-DECOUVERTE_A_VENDRE/
+
 ├── algorithme_champion.py        # Complete vector quantizer and asymmetric similarity scoring engine
 ├── RAPPORT_EXECUTIF_VECTOR_DB.md # Detailed technical report on anisotropic embedding compaction
 ├── SHA256_CERTIFICATE.txt        # Cryptographic certificate of authenticity & anteriority

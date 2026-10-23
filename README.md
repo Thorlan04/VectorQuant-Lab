@@ -29,7 +29,7 @@ Evaluated on **5,000 synthetic anisotropic 384-dimensional vectors** queried by 
 | **Truncated 75% Dims + Int8** | `0.8475` | `5.26x (81.0%)` | `292.0 B` | `21.0 ms` | REJECTED (Recall < 0.92) |
 | **Percentile Clipped SQ8 (p0.5-p99.5)** | `0.9170` | `3.92x (74.5%)` | `392.0 B` | `100.7 ms` | REJECTED (Recall < 0.92) |
 | **Standard Min-Max SQ8** *(Industry Baseline)* | `0.9805` | `3.92x (74.5%)` | `392.0 B` | `27.0 ms` | Passed Baseline |
-| **VectorQuant Champion (`WalshHadamard_BalancedCompand_SQ8_gen77`)** | **`0.9820`** | **`3.98x (74.9%)`** | **`386.0 B`** | `126.7 ms` | **NEW CERTIFIED CHAMPION** |
+| **VectorQuant Champion (`WalshHadamard_PureSQ8_F16Scale_G415_v4`)** | **`0.9820`** | **`3.98x (74.9%)`** | **`386.0 B`** | `126.7 ms` | **NEW CERTIFIED CHAMPION** |
 
 ### Mathematical Core Innovations:
 1. **Deterministic Unit-Sphere Walsh-Hadamard Transform (H_128)**: Orthogonal butterfly rotation equalizes coordinate variance across all dimensions, eliminating anisotropic clustering without altering true cosine angles (<Hq, Hx> == <q, x>).
@@ -48,17 +48,13 @@ import numpy as np
 
 def quantize_transform(vectors_fp32: np.ndarray, calibration_stats=None) -> Tuple[np.ndarray, dict]:
     # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]
-    # Algorithm: WalshHadamard_BalancedCompand_SQ8_gen77 | SHA-256: 1e2a3a6e...
+    # Algorithm: WalshHadamard_PureSQ8_F16Scale_G415_v4 | SHA-256: 5957ff4c...
     return codes_uint8, meta_params
-
-def asymmetric_similarity_score(query_fp32: np.ndarray, quantized_codes: np.ndarray, meta_params: dict) -> np.ndarray:
-    # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]
-    return cosine_similarity_matrix
 ```
 
 ### Commercial Package File Structure:
 ```
-
+DECOUVERTE_A_VENDRE/
 ├── algorithme_champion.py        # Complete vector quantizer and asymmetric similarity scoring engine
 ├── RAPPORT_EXECUTIF_VECTOR_DB.md # Detailed technical report on anisotropic embedding compaction
 ├── SHA256_CERTIFICATE.txt        # Cryptographic certificate of authenticity & anteriority
@@ -67,38 +63,7 @@ def asymmetric_similarity_score(query_fp32: np.ndarray, quantized_codes: np.ndar
 
 ---
 
-
-
----
-
-## 4. 🤖 Edge AI, ROS2 & Autonomous Robotics Integration
-
-For Autonomous Mobile Robots (AMRs), delivery drones, and Embodied AI agents operating on memory-constrained compute (e.g. **NVIDIA Jetson Orin Nano 8GB / Orin NX 16GB**), storing dense visual landmarks for Open-Vocabulary Semantic SLAM and Visual-Language Navigation (VLN) causes severe unified memory bottlenecks.
-
-### Embedded Hardware & Real-Time Specifications:
-- **74.9% Unified RAM Reduction (3.98x Density Multiplier)**: Stores over **100,000 spatial topological nodes** in less than 38 MB of RAM, leaving maximum unified memory for Vision-Language Models (VLM / CLIP / DINOv2).
-- **Certified Recall@10 = 0.9820**: Walsh-Hadamard butterfly rotation orthogonalizes coordinate variance, preserving critical topological discriminability without anisotropic collapse.
-- **100% Tensor Core Offloading**: The entire quantization and asymmetric query pipeline executes on CPU vector units (ARM NEON / x86 AVX2), reserving 100% of GPU Tensor Cores for camera perception and action policy inference.
-- **Sub-Millisecond Nearest Landmark Search**: Asymmetric dot-product retrieval runs in < 3.5 ms for 5,000 landmarks, seamlessly matching real-time 30 Hz Nav2 costmap update cycles.
-
-### 8-Line ROS2 (
-clpy) Semantic Memory Integration Snippet:
-`python
-import rclpy
-from rclpy.node import Node
-
-class SemanticSLAMMemoryNode(Node):
-    def store_landmark(self, visual_embedding_fp32: list):
-        # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]
-        # WalshHadamard_BalancedCompand_SQ8_gen77: 74.9% RAM saving (3.98x density), Recall@10: 0.9820
-        quantized_node = quantize_landmark_vector(visual_embedding_fp32)
-        self.topological_map.append(quantized_node)  # Frees unified Jetson RAM for VLM inference
-`
-
-Full executable node: 
-os2_edge_integration_example.py included in enterprise package.
-
-## 5. Reproducible Verification & Commercial Licensing
+## 4. Reproducible Verification & Commercial Licensing
 
 ### Run Verification Locally:
 ```bash

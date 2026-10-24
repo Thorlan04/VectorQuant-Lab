@@ -1,0 +1,34 @@
+# =============================================================================
+# ARGON B2B SHOWROOM SECURITY LOCKDOWN (.gitignore)
+# Seuls la vitrine publique (README.md, verify_benchmark.py, public_store/,
+# LICENSE, requirements.txt) est publiée sur GitHub.
+# Tout le laboratoire R&D, le simulateur, les agents IA et les formules
+# restent 100% privés en local sur D:\.
+# =============================================================================
+
+# 1. Secrets, Clés API & Environnements
+.env
+.env.*
+venv/
+.venv/
+__pycache__/
+*.pyc
+
+# 2. Propriété Intellectuelle & Bases de Données de Formules (STRICTEMENT PRIVÉ)
+DECOUVERTE_A_VENDRE/
+data/
+*.db
+*.sqlite
+*.sqlite3
+*.zip
+
+# 3. Code Source Interne du Laboratoire, Simulateurs & Agents IA (STRICTEMENT PRIVÉ)
+src/
+tests/
+run_lab.py
+autonomous_autopilot.py
+hunt_prospects.py
+dashboard.html
+public_store/dashboard.html
+*.bat
+.github/

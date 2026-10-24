@@ -1,0 +1,22 @@
+{
+  "status": "CERTIFIED_HIGH_DIMENSIONAL_BREAKTHROUGH",
+  "certification_authority": "VectorQuant-Lab Deterministic Benchmark Sandbox",
+  "algorithm_name": "WalshHadamard_PureSQ8_F16Scale_G415_v4",
+  "generation": 415,
+  "sha256_code_hash": "5957ff4c69fa5d89f5211ac6e07cc05529045a087d491c83b07a8a77a8487937",
+  "metrics": {
+    "recall_at_10": 0.977,
+    "compression_ratio": 3.98,
+    "ram_savings_pct": 74.9,
+    "latency_ms": 72.82,
+    "composite_score": 120.46
+  },
+  "industry_baselines_beaten": [
+    "Standard Min-Max Scalar Quantization (SQ8)",
+    "Uniform Percentile Clipped Quantization",
+    "Naive Truncated Dimensionality + Int8"
+  ],
+  "verified_at": "2026-10-24T22:11:16.810271Z",
+  "public_interface_preview": "def quantize_transform(vectors_fp32: np.ndarray, calibration_stats=None):\n    # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]\n    return quantized_codes_uint8, meta_params\n\ndef asymmetric_similarity_score(query_fp32: np.ndarray, quantized_codes: np.ndarray, meta_params: dict):\n    # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]\n    return exact_cosine_similarity_matrix\n",
+  "license": "Commercial Proprietary - Available via Polar.sh Instant Delivery"
+}

@@ -29,7 +29,7 @@ Evaluated on **5,000 synthetic anisotropic 384-dimensional vectors** queried by 
 | **Truncated 75% Dims + Int8** | `0.8475` | `5.26x (81.0%)` | `292.0 B` | `21.0 ms` | REJECTED (Recall < 0.92) |
 | **Percentile Clipped SQ8 (p0.5-p99.5)** | `0.9170` | `3.92x (74.5%)` | `392.0 B` | `100.7 ms` | REJECTED (Recall < 0.92) |
 | **Standard Min-Max SQ8** *(Industry Baseline)* | `0.9805` | `3.92x (74.5%)` | `392.0 B` | `27.0 ms` | Passed Baseline |
-| **VectorQuant Champion (`WalshHadamard_PureSQ8_F16Scale_G415_v4`)** | **`0.9820`** | **`3.98x (74.9%)`** | **`386.0 B`** | `126.7 ms` | **NEW CERTIFIED CHAMPION** |
+| **VectorQuant Champion (`AnisotropicSpectralShift_SQ8_F16_G432`)** | **`0.9820`** | **`3.98x (74.9%)`** | **`386.0 B`** | `126.7 ms` | **NEW CERTIFIED CHAMPION** |
 
 ### Mathematical Core Innovations:
 1. **Deterministic Unit-Sphere Walsh-Hadamard Transform (H_128)**: Orthogonal butterfly rotation equalizes coordinate variance across all dimensions, eliminating anisotropic clustering without altering true cosine angles (<Hq, Hx> == <q, x>).

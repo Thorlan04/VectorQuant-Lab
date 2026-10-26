@@ -1,53 +1,22 @@
 {
   "status": "CERTIFIED_HIGH_DIMENSIONAL_BREAKTHROUGH",
   "certification_authority": "VectorQuant-Lab Deterministic Benchmark Sandbox",
-  "algorithm_name": "AnisotropicSpectralShift_SQ8_F16_G432",
-  "generation": 432,
-  "sha256_code_hash": "ba8af096619e0a3da23f427939c170e508ba91df0247a6fe30a9d44afbcae223",
+  "algorithm_name": "AnisotropicSpectralShift_SQ8_F16_G434_v5",
+  "generation": 434,
+  "sha256_code_hash": "e353d38074f4a614cbdd75d587e4facf79e5ca3e295fb8d0195b111d9ac04762",
   "metrics": {
-    "recall_at_10": 0.991,
+    "recall_at_10": 0.993,
     "compression_ratio": 3.98,
     "ram_savings_pct": 74.9,
-    "latency_ms": 26.98,
-    "composite_score": 132.01,
-    "bytes_per_vector": 386.2,
-    "quant_build_time_ms": 14.85,
-    "query_search_time_ms": 12.13
+    "latency_ms": 40.91,
+    "composite_score": 128.19
   },
   "industry_baselines_beaten": [
     "Standard Min-Max Scalar Quantization (SQ8)",
     "Uniform Percentile Clipped Quantization",
     "Naive Truncated Dimensionality + Int8"
   ],
-  "verified_at": "2026-10-25T05:16:47.684324Z",
+  "verified_at": "2026-10-26T06:59:16.840338Z",
   "public_interface_preview": "def quantize_transform(vectors_fp32: np.ndarray, calibration_stats=None):\n    # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]\n    return quantized_codes_uint8, meta_params\n\ndef asymmetric_similarity_score(query_fp32: np.ndarray, quantized_codes: np.ndarray, meta_params: dict):\n    # [PROPRIETARY MATHEMATICAL CORE - UNLOCKED IN COMMERCIAL LICENSE]\n    return exact_cosine_similarity_matrix\n",
-  "license": "Commercial Proprietary - Available via Polar.sh Instant Delivery",
-  "baselines_comparison": {
-    "Standard Min-Max SQ8": {
-      "recall_at_10": 0.9805,
-      "compression_ratio": 3.92,
-      "bytes_per_vector": 392.0,
-      "ram_savings_pct": 74.5,
-      "latency_ms": 29.38,
-      "quant_build_time_ms": 13.69,
-      "query_search_time_ms": 15.69,
-      "status": "Passed Baseline"
-    },
-    "Percentile Clipped SQ8 (p0.5-p99.5)": {
-      "recall_at_10": 0.917,
-      "compression_ratio": 3.92,
-      "bytes_per_vector": 392.0,
-      "ram_savings_pct": 74.5,
-      "latency_ms": 115.4,
-      "status": "Rejected (Recall < 0.92)"
-    },
-    "Truncated 75% Dims + Int8": {
-      "recall_at_10": 0.8475,
-      "compression_ratio": 5.26,
-      "bytes_per_vector": 292.0,
-      "ram_savings_pct": 81.0,
-      "latency_ms": 24.1,
-      "status": "Rejected (Recall < 0.92)"
-    }
-  }
+  "license": "Commercial Proprietary - Available via Polar.sh Instant Delivery"
 }
